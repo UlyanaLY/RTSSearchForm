@@ -1,16 +1,15 @@
 import org.junit.*;
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Configuration.browser;
-
+import static com.codeborne.selenide.Configuration.*;
 
 public class SearchTest {
     private SearchPage page;
 
     @BeforeClass
     public static void setUp() {
-        System.setProperty("webdriver.gecko.driver", "/home/ulyanaly/Public/Drivers/geckodriver-v0.24.0-linux64/geckodriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\PC\\Documents\\GitHub\\RTSSearchForm\\drivers\\chromedriver.exe");
+        browserSize = "1920x1080";
         baseUrl = "https://223.rts-tender.ru/supplier/auction/Trade/Search.aspx";
-        browser = "firefox";
+        browser = "chrome";
     }
 
     @Test
